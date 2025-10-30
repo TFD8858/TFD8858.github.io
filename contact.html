@@ -3,28 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Topformdesigner</title>
+  <title>Kontakt</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9fafc; text-align: center; margin: 0; padding: 3rem; }
-    header { background: #222; color: white; padding: 1rem 0; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    h1 { color: #333; }
-    footer { margin-top: 3rem; color: #777; font-size: 0.9rem; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      text-align: center;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 1.5rem;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    a.email {
+      display: inline-block;
+      background: #0070f3;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    a.email:hover {
+      background: #0059c9;
+    }
+
+    footer {
+      color: #777;
+      margin: 2rem 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 <body>
- <div id="navbar"></div>
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => document.getElementById("navbar").innerHTML = data);
-</script>
+  <div id="navbar"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
 
-
-  <h1>Kontakt</h1>
-  <p>ring eller skriv til os på +45 71 31 49 64</p>
-  <p><a href="Topformdesigner@gmail.com">Topformdesigner@gmail.com</a></p>
+  <main>
+    <h1>Kontakt</h1>
+    <p>ring eller skriv til os på +45 71 31 49 64</p>
+    <a class="email" href="Topformdesigner@gmail.com">Topformdesigner@gmail.com</a>
+  </main>
 
   <footer>© Topformdesigner</footer>
 </body>
