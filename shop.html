@@ -6,71 +6,126 @@
   <title>Topformdesigner</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      margin: 0;
-      text-align: center;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 1rem 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* 🌑 Sort topmenu */
+  header {
+    background: #222;
+    color: white;
+    padding: 0.5rem 0; /* mindre højde */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    color: #333;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 1rem;
+    transition: transform 0.2s;
+  }
+
+  .product:hover {
+    transform: scale(1.02);
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .product h2 {
+    font-size: 1.1rem;
+    color: #111;
+  }
+
+  .price {
+    color: #0070f3;
+    font-weight: bold;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background: #0070f3;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  .contact-btn:hover {
+    background: #0059c9;
+  }
+
+  footer {
+    color: #777;
+    margin: 2rem 0 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* 📱 Mobilvisning */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
     }
     nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
+      display: block;
+      font-size: 1.1rem;
+      padding: 0.3rem;
     }
-    nav a:hover {
-      text-decoration: underline;
+    header {
+      padding: 0.4rem 0;
     }
     h1 {
-      color: #333;
-      margin-top: 2rem;
-    }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 2rem;
+      font-size: 1.5rem;
+      margin-top: 1rem;
     }
     .product {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 250px;
-      padding: 1rem;
-    }
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .product h2 {
-      font-size: 1.2rem;
-      color: #111;
-    }
-    .price {
-      color: #0070f3;
-      font-weight: bold;
-    }
-    .contact-btn {
-      display: inline-block;
-      background: #0070f3;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      margin-top: 0.5rem;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .contact-btn:hover {
-      background: #0059c9;
-    }
-    footer {
-      color: #777;
-      margin: 3rem 0 1rem;
-      font-size: 0.9rem;
+      width: 90%;
     }
   </style>
 </head>
